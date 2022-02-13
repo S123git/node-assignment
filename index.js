@@ -3,6 +3,7 @@ const app = express();
  
 var router = express.Router();              
 router.get('/', function(req, res) {
+    res.set('Access-Control-Allow-Origin', '*');
     var http = require('https');
     // API Call 
     http.get('https://jsonplaceholder.typicode.com/users', (response) => {
